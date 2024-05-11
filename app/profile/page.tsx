@@ -5,9 +5,7 @@ import Heading from '../utils/Heading';
 import Header from '../components/Header';
 import Profile from "../components/Profile/Profile"
 import { useSelector } from 'react-redux';
-
 type Props = {}
-
 const page: FC<Props> = (props) => {
     const [open, setOpen] = useState(false);
     const [activeItem, setActiveItem] = useState(0);
@@ -15,7 +13,7 @@ const page: FC<Props> = (props) => {
     const { user } = useSelector((state: any) => state.auth);
     return (
         <div>
-            <Protected>                        
+            <Protected>
                 <Heading
                     title={`${user?.name}'s profile`}
                     description="Tutor Eye is a platform for students to learn and get help from teachers"
@@ -31,5 +29,4 @@ const page: FC<Props> = (props) => {
         </div>
     )
 }
-
 export default page;
